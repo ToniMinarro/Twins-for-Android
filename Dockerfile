@@ -1,14 +1,14 @@
 # Usar una imagen base con Android SDK. Asegúrate de que la versión coincida con tu compileSdk.
-FROM androidsdk/android-33
+FROM androidsdk/android-31
 
 # Variables de entorno para Android SDK
 ENV ANDROID_SDK_ROOT /opt/android-sdk-linux
 ENV PATH $PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator
 
 # Instalar herramientas de compilación y otras dependencias si es necesario.
-# La imagen base androidsdk/android-33 ya debería tener la mayoría de lo necesario.
-# RUN sdkmanager "system-images;android-33;google_apis;x86_64" # Ejemplo si necesitaras una imagen de sistema específica
-# RUN sdkmanager "platforms;android-33" "build-tools;33.0.2" # Ejemplo para instalar build-tools específicas
+# La imagen base androidsdk/android-31 ya debería tener la mayoría de lo necesario.
+# RUN sdkmanager "system-images;android-31;google_apis;x86_64" # Ejemplo si necesitaras una imagen de sistema específica
+# RUN sdkmanager "platforms;android-31" "build-tools;31.0.2" # Ejemplo para instalar build-tools específicas
 
 # Crear directorio de la aplicación
 WORKDIR /app
