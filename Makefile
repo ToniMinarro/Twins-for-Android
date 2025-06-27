@@ -1,5 +1,5 @@
 # Variables
-APP_NAME ?= my-android-app
+APP_NAME ?= twins-for-android
 DOCKER_COMPOSE_CMD = docker-compose
 DOCKER_COMPOSE_RUN = $(DOCKER_COMPOSE_CMD) run --rm android-app
 DOCKER_BUILD_CMD = docker build

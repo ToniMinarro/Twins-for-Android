@@ -1,4 +1,4 @@
-# My Application
+# Twins for Android
 
 Este es un proyecto Android de ejemplo.
 
