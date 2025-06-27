@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  android-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Montar el código fuente de la app para desarrollo en vivo
+      - ./app:/app/app
+      # Montar el archivo build.gradle de la app
+      - ./app/build.gradle:/app/app/build.gradle
+      # Montar el archivo proguard-rules.pro
+      - ./app/proguard-rules.pro:/app/app/proguard-rules.pro
+
+      # Persistir las dependencias de Gradle para acelerar builds posteriores
+      - gradle_cache:/root/.gradle
+      # Persistir el directorio .m2 para dependencias de Maven si se usan
+      - m2_cache:/root/.m2
+
+    # Si necesitas exponer puertos (por ejemplo, para ADB o un emulador dentro del contenedor)
+    # Esto es avanzado y puede requerir configuración adicional en el Dockerfile y el contenedor.
+    # ports:
+    #   - "5554:5554" # ADB device port
+    #   - "5555:5555" # ADB device port
+    #   - "8080:8080" # Ejemplo para un servidor web si la app lo incluye
+
+    # Mantener el contenedor en ejecución (opcional, depende del flujo de trabajo)
+    # tty: true
+    # stdin_open: true
+
+volumes:
+  gradle_cache:
+  m2_cache:

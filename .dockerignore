@@ -1,0 +1,25 @@
+# Archivos y directorios generados por el build
+/build
+/app/build
+/.gradle
+/app/.gradle
+
+# Archivos de configuración local
+local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Logs
+*.log
+
+# Capturas de Android Studio
+captures/
+
+# Archivos generados por el sistema
+.cxx/
+app/.cxx/
+
+# Keystores de depuración/release (no deberían estar en el repositorio de todas formas)
+*.jks
+app/*.jks
