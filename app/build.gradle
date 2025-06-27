@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.myapp'
+    namespace 'com.toniminarro.twinsforandroid'
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.myapp"
+        applicationId "com.toniminarro.twinsforandroid"
         minSdk 24
         targetSdk 31
         versionCode 1

@@ -1,8 +1,8 @@
-package com.example.myapp
+package com.toniminarro.twinsforandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myapp.databinding.ActivityMainBinding
+import com.toniminarro.twinsforandroid.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
